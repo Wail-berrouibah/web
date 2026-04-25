@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <title>Admin Dashboard - DigitalStore</title>
+</head>
+<body>
+    <nav class="admin-nav">
+        <span class="logo">DigitalStore Admin</span>
+        <ul>
+            <li><a href="admin-dashboard.html" class="active">Dashboard</a></li>
+            <li><a href="admin-products.html">Products</a></li>
+            <li><a href="admin-orders.html">Orders</a></li>
+            <li><a href="admin-users.html">Users</a></li>
+            <li><a href="#" onclick="logout()">Logout</a></li>
+        </ul>
+    </nav>
+
+    <div class="admin-content">
+        <h1>Dashboard</h1>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Products</h3>
+                <p id="total-products">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Orders</h3>
+                <p id="total-orders">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Users</h3>
+                <p id="total-users">0</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="data-manager.js"></script>
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>

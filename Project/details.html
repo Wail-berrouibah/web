@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="detail.css">
+    <script src="Admin/data-manager.js"></script>
+    <title>DigitalStore - Product Details</title>
+</head>
+<body>
+    <nav>
+        <span class="logo">DigitalStore</span>
+        <ul>
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="product.html">Products</a></li>
+            <li class="link"><a href="cart.html">Shopping Cart</a></li>
+            <li class="link"><a href="checkout.html">Checkout</a></li>
+            <li class="link"><a href="Admin/admin-login.html" class="admin-btn">Admin</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="back-nav">
+            <a href="product.html">&larr; Back to Products</a>
+        </div>
+
+        <div class="product-detail-wrapper">
+            <div class="product-visuals">
+                <div class="main-display">
+                    <img src="./img/logo.png" alt="Main Product Image" id="current-img">
+                </div>
+            </div>
+
+            <div class="product-data">
+                <span class="category-tag">Category</span>
+                <h1>Product Name</h1>
+                <p class="sku">Model: -</p>
+                
+                <div class="price-section">
+                    <span class="current-price">$0.00</span>
+                    <span class="stock-status">In Stock</span>
+                </div>
+
+                <p class="short-description">Product description</p>
+
+                <div class="product-options">
+                    <div class="option">
+                        <label>Quantity:</label>
+                        <input type="number" value="1" min="1" class="qty-input">
+                    </div>
+                </div>
+
+                <div class="cart-actions">
+                    <button class="btn-primary">Add to Shopping Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="specs-section">
+            <h2>Product Details</h2>
+            <table class="specs-table">
+                <tr><td>Brand</td><td id="spec-brand">-</td></tr>
+                <tr><td>Category</td><td id="spec-category">-</td></tr>
+                <tr><td>Specs</td><td id="spec-specs">-</td></tr>
+                <tr><td>Available Quantity</td><td id="spec-quantity">-</td></tr>
+                <tr><td>Added</td><td id="spec-date">-</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 DigitalStore. Built by Team Tech.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+            const product = getProducts().find(p => p.id === parseInt(productId));
+
+            if (product) {
+                document.title = 'DigitalStore - ' + product.name;
+                document.querySelector('.category-tag').textContent = product.category.charAt(0).toUpperCase() + product.category.slice(1);
+                document.querySelector('.product-data h1').textContent = product.name;
+                document.querySelector('.current-price').textContent = '$' + product.price.toFixed(2);
+                document.querySelector('.short-description').textContent = product.specs;
+                document.getElementById('current-img').src = product.image || './img/logo.png';
+                document.querySelector('.stock-status').textContent = product.quantity > 0 ? 'In Stock' : 'Out of Stock';
+                document.getElementById('spec-brand').textContent = product.brand;
+                document.getElementById('spec-category').textContent = product.category;
+                document.getElementById('spec-specs').textContent = product.specs;
+                document.getElementById('spec-quantity').textContent = product.quantity;
+                document.getElementById('spec-date').textContent = product.createdAt;
+            } else {
+                document.querySelector('.product-data h1').textContent = 'Product Not Found';
+                document.querySelector('.short-description').textContent = 'The product you are looking for does not exist.';
+            }
+        });
+    </script>
+</body>
+</html>
