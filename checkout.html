@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+    <title>DigitalStore - Checkout</title>
+</head>
+<body>
+    <nav>
+        <span class="logo">DigitalStore</span>
+        <ul>
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="product.html">Products</a></li>
+            <li class="link"><a href="cart.html">Shopping Cart</a></li>
+            <li class="link"><a href="checkout.html">Checkout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Checkout</h1>
+
+        <div class="checkout-container">
+            <div class="checkout-forms">
+                <form id="checkout-form">
+                    <section class="form-section">
+                        <h2>1. Shipping Address</h2>
+                        <div class="form-grid">
+                            <input type="text" placeholder="First Name" required>
+                            <input type="text" placeholder="Last Name" required>
+                            <input type="text" placeholder="Address" class="full-width" required>
+                            <input type="text" placeholder="City" required>
+                            <input type="text" placeholder="Zip Code" required>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <h2>2. Payment Details</h2>
+                        <div class="form-grid">
+                            <input type="text" placeholder="Card Number" class="full-width" required>
+                            <input type="text" placeholder="MM/YY" required>
+                            <input type="text" placeholder="CVV" required>
+                        </div>
+                    </section>
+
+                    <button type="submit" class="btn-order">Place Order Now</button>
+                </form>
+            </div>
+
+            <div class="order-sidebar">
+                <h3>Order Summary</h3>
+                <div class="mini-item">
+                    <span>MacBook Pro M3 Max (x1)</span>
+                    <span>$2,499.00</span>
+                </div>
+                <div class="mini-item">
+                    <span>Smartphone X (x2)</span>
+                    <span>$1,599.98</span>
+                </div>
+                <hr>
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span>$4,098.98</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total</span>
+                    <span>$4,098.98</span>
+                </div>
+                <p class="secure-text">Secure Encrypted Transaction</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 DigitalStore. All rights reserved.</p>
+    </footer>
+</body>
+</html>

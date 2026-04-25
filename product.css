@@ -1,0 +1,76 @@
+.shop-layout {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 250px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.filter-group { 
+    margin-bottom: 25px; 
+}
+.filter-group label { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-size: 0.9rem; 
+}
+.filter-group select { 
+    width: 100%; 
+    padding: 8px; 
+    border-radius: 5px; 
+}
+
+.main-shop { 
+    flex: 3; 
+}
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 15px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.shop-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: 0.3s ease;
+}
+
+.shop-item:hover { 
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.shop-item img { 
+    width: 100%; 
+    max-width: 150px; 
+    margin-bottom: 15px; 
+}
+.shop-item .price { 
+    font-weight: bold; 
+    color: #007BFF; 
+    font-size: 1.2rem; 
+    margin-bottom: 15px; 
+}
+
+@media (max-width: 900px) {
+    .shop-layout { flex-direction: column; }
+    .sidebar { max-width: 100%; }
+}

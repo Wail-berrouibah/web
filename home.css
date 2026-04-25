@@ -1,0 +1,179 @@
+/* Hero Section */
+
+#home .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.content-text {
+    flex: 1;/*50 l text w 50*/
+}
+
+.content-text h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+/* Fixed: Separated nested-style logic for p and .fdestin */
+.content-text p {
+    font-size: 1.5rem;
+    color: #303030;
+    line-height: 1.8;
+    font-weight: bold;
+}
+
+.dstore {
+    color: #007BFF; 
+}
+
+.fdestin { 
+    font-size: 1.2rem; 
+    display: block; 
+    color: #666; 
+    font-weight: 400; 
+    margin-top: 10px;
+}
+
+#home .content img {
+    flex: 1;
+    max-width: 600px;
+    border-radius: 8px;
+    background-color: #9d9b9b;
+}
+
+/* Categories & Products ychbho l bb3dhm ndirolhm styling m3a b3d derba w7da for clean code */
+.categorie-list, .product-list { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/*hadi ndiroha l responsive design autofilt: ymdd l3onsor for empty space
+    mimax: a9l espace hwa 250px w max hwa 1fraction of space for 
+    example all space = 1000 rah y9smo 3la nmbr of element w win maykoucnouch a9ll mn 250 px */
+    gap: 25px;
+}
+
+.categorie-item, .product-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    transition: 0.3s;
+}
+
+.categorie-item:hover, .product-item:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transform: translateY(-5px);
+}
+
+/* FIXED: Consolidated image styles to prevent overrides */
+.categorie-item img, .product-item img {
+    width: 150px;         /* Increased to 150px as per your circular requirement */
+    height: 150px;        
+    border-radius: 50%;   
+    object-fit: cover;    
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1)); 
+    display: block;       
+    margin: 0 auto 15px;  /* Added bottom margin for spacing from text */
+}
+
+/* Promo Section */
+.promo-section {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.promo-text {
+    flex: 2;
+}
+.promo-image {
+    flex: 1;
+    text-align: right; 
+}
+.promo-image img { 
+    width: 100%; 
+    max-width: 250px; 
+}
+
+.promo-section .btn-view {
+    background: white;
+    color: #007BFF;
+    margin-top: 20px;
+}
+
+/* Testimonials */
+.testimonials-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+/* Star Rating (Optional addition if you add spans to HTML) */
+.testimonial-card::after {
+    content: "★★★★★";
+    display: block;
+    margin-top: 15px;
+    color: #FFD700; /* Gold color */
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.testimonial-card h4 {
+    margin-top: 20px;
+    font-style: normal;
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Adding a small blue dash before the name */
+
+/* Responsive */
+@media (max-width: 768px) {
+    #home .content, .promo-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content-text h1 { 
+        font-size: 2.5rem; 
+    }
+    .promo-image { 
+        text-align: center; 
+        margin-top: 20px; 
+    }
+}

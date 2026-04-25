@@ -1,0 +1,117 @@
+/* --- checkout.css --- */
+
+.checkout-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Section Styling */
+.form-section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    margin-bottom: 30px;
+}
+
+.form-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+/* Grid for Inputs */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007BFF;
+}
+
+/* Order Button */
+.btn-order {
+    width: 100%;
+    background: #28a745; /* Green for completion */
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-order:hover {
+    background: #218838;
+}
+
+/* Sidebar Summary */
+.order-sidebar {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid #eee;
+    height: fit-content;
+}
+
+.mini-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.total {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #1a1a1a;
+}
+
+.secure-text {
+    text-align: center;
+    color: #888;
+    font-size: 0.8rem;
+    margin-top: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 800px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .full-width {
+        grid-column: span 1;
+    }
+}

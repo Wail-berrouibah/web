@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="style.css">
+    <title>DigitalStore - Product Details</title>
+</head>
+<body>
+    <nav>
+        <span class="logo">DigitalStore</span>
+        <ul>
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="product.html">Products</a></li>
+            <li class="link"><a href="cart.html">Shopping Cart</a></li>
+            <li class="link"><a href="checkout.html">Checkout</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="back-nav">
+            <a href="product.html">&larr; Back to Products</a>
+        </div>
+
+        <div class="product-detail-wrapper">
+            <div class="product-visuals">
+                <div class="main-display">
+                    <img src="./img/logo.png" alt="Main Product Image" id="current-img">
+                </div>
+                <div class="image-previews">
+                    <img src="./img/logo.png" class="thumb active" alt="View 1">
+                    <img src="./img/logo.png" class="thumb" alt="View 2">
+                    <img src="./img/logo.png" class="thumb" alt="View 3">
+                </div>
+            </div>
+
+            <div class="product-data">
+                <span class="category-tag">Laptops / Premium</span>
+                <h1>MacBook Pro M3 Max</h1>
+                <p class="sku">Model: Z1-2026-X</p>
+                
+                <div class="price-section">
+                    <span class="current-price">$2,499.00</span>
+                    <span class="stock-status">In Stock</span>
+                </div>
+
+                <p class="short-description">
+                    The most advanced chip ever built for a personal computer. Experience extreme performance, a stunning Liquid Retina XDR display, and up to 22 hours of battery life.
+                </p>
+
+                <hr>
+
+                <div class="product-options">
+                    <div class="option">
+                        <label>Memory (RAM):</label>
+                        <div class="choice-chips">
+                            <button class="chip selected">32GB</button>
+                            <button class="chip">64GB</button>
+                            <button class="chip">128GB</button>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <label>Color:</label>
+                        <div class="color-swatches">
+                            <div class="swatch" style="background: #1e1e1e;" title="Space Black"></div>
+                            <div class="swatch" style="background: #e3e3e3;" title="Silver"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-actions">
+                    <input type="number" value="1" min="1" class="qty-selector">
+                    <button class="btn-primary">Add to Shopping Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="specs-section">
+            <h2>Technical Specifications</h2>
+            <table class="specs-table">
+                <tr>
+                    <td>Processor</td>
+                    <td>Apple M3 Max chip with 16-core CPU</td>
+                </tr>
+                <tr>
+                    <td>Graphics</td>
+                    <td>40-core GPU, Hardware-accelerated ray tracing</td>
+                </tr>
+                <tr>
+                    <td>Display</td>
+                    <td>14.2-inch Liquid Retina XDR (3024 x 1964)</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>1.62 kg (3.5 lbs)</td>
+                </tr>
+                <tr>
+                    <td>Ports</td>
+                    <td>MagSafe 3, 3x Thunderbolt 4, HDMI, SDXC</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 DigitalStore. Built by Team Tech.</p>
+    </footer>
+</body>
+</html>
