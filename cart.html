@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cart.css">
+    <title>DigitalStore - Shopping Cart</title>
+</head>
+<body>
+    <nav>
+        <span class="logo">DigitalStore</span>
+        <ul>
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="product.html">Products</a></li>
+            <li class="link"><a href="cart.html">Shopping Cart</a></li>
+            <li class="link"><a href="checkout.html">Checkout</a></li>
+            <li class="link"><a href="Admin/admin-login.html" class="admin-btn">Admin</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Your Shopping Cart</h1>
+
+        <div class="cart-wrapper">
+            <div class="cart-items" id="cart-items">
+            </div>
+
+            <div class="cart-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span class="free-text">FREE</span>
+                </div>
+                <hr>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+                <a href="checkout.html" class="btn-checkout" id="checkout-btn">Proceed to Checkout</a>
+                <a href="product.html" class="btn-continue">Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 DigitalStore Project. All rights reserved.</p>
+        </div>
+</footer>
+    <script src="js/cart.js"></script>
+</body>
+</html>

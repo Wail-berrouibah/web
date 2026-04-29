@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="detail.css">
+    <script src="Admin/data-manager.js"></script>
+    <title>DigitalStore - Product Details</title>
+</head>
+<body>
+    <nav>
+        <span class="logo">DigitalStore</span>
+        <ul>
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="product.html">Products</a></li>
+            <li class="link"><a href="cart.html">Shopping Cart</a></li>
+            <li class="link"><a href="checkout.html">Checkout</a></li>
+            <li class="link"><a href="Admin/admin-login.html" class="admin-btn">Admin</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="back-nav">
+            <a href="product.html">&larr; Back to Products</a>
+        </div>
+
+        <div class="product-detail-wrapper">
+            <div class="product-visuals">
+                <div class="main-display">
+                    <img src="./img/logo.png" alt="Product" id="main-img">
+                </div>
+                <div class="thumbnail-list" id="thumbnails"></div>
+            </div>
+
+            <div class="product-data">
+                <span class="category-tag" id="category">Category</span>
+                <h1 id="product-name">Product Name</h1>
+                <p class="sku">Model: <span id="product-model">-</span></p>
+                
+                <div class="price-section">
+                    <span class="current-price" id="product-price">$0.00</span>
+                    <span class="stock-status" id="stock-status">In Stock</span>
+                </div>
+
+                <p class="short-description" id="product-desc">Description</p>
+
+                <div class="product-options">
+                    <div class="option" id="color-option" style="display:none;">
+                        <label>Color:</label>
+                        <div class="color-options">
+                            <button class="color-btn selected" data-color="black">Black</button>
+                            <button class="color-btn" data-color="white">White</button>
+                            <button class="color-btn" data-color="blue">Blue</button>
+                        </div>
+                    </div>
+
+                    <div class="option" id="storage-option" style="display:none;">
+                        <label>Storage:</label>
+                        <div class="storage-options">
+                            <button class="storage-btn selected" data-storage="128">128GB</button>
+                            <button class="storage-btn" data-storage="256">256GB</button>
+                            <button class="storage-btn" data-storage="512">512GB</button>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <label>Quantity:</label>
+                        <input type="number" value="1" min="1" id="qty-input">
+                    </div>
+                </div>
+
+                <div class="cart-actions">
+                    <button class="btn-primary" id="add-to-cart">Add to Shopping Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="specs-section">
+            <h2>Product Details</h2>
+            <table class="specs-table">
+                <tr><td>Brand</td><td id="spec-brand">-</td></tr>
+                <tr><td>Category</td><td id="spec-category">-</td></tr>
+                <tr><td>Specs</td><td id="spec-specs">-</td></tr>
+                <tr><td>Available</td><td id="spec-quantity">-</td></tr>
+                <tr><td>Added</td><td id="spec-date">-</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 DigitalStore Project. All rights reserved.</p>
+        </div>
+</footer>
+    <script src="js/details.js"></script>
+</body>
+</html>

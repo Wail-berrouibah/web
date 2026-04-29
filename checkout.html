@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="checkout.css">
+    <title>DigitalStore - Checkout</title>
+</head>
+<body>
+    <nav>
+        <span class="logo">DigitalStore</span>
+        <ul>
+            <li class="link"><a href="index.html">Home</a></li>
+            <li class="link"><a href="product.html">Products</a></li>
+            <li class="link"><a href="cart.html">Shopping Cart</a></li>
+            <li class="link"><a href="checkout.html">Checkout</a></li>
+            <li class="link"><a href="Admin/admin-login.html" class="admin-btn">Admin</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Checkout</h1>
+
+        <div class="checkout-container">
+            <div class="checkout-forms">
+                <form id="checkout-form">
+                    <section class="form-section">
+                        <h2>1. Shipping Address</h2>
+                        <div class="form-grid">
+                            <input type="text" id="first-name" placeholder="First Name" required>
+                            <input type="text" id="last-name" placeholder="Last Name" required>
+                            <input type="text" id="address" placeholder="Address" class="full-width" required>
+                            <input type="text" id="city" placeholder="City" required>
+                            <input type="text" id="zip" placeholder="Zip Code" required>
+                        </div>
+                    </section>
+
+                    <section class="form-section">
+                        <h2>2. Payment Details</h2>
+                        <div class="form-grid">
+                            <input type="text" id="card-number" placeholder="Card Number" class="full-width" required>
+                            <input type="text" id="expiry" placeholder="MM/YY" required>
+                            <input type="text" id="cvv" placeholder="CVV" required>
+                        </div>
+                    </section>
+
+                    <button type="submit" class="btn-order">Place Order Now</button>
+                    <p class="error-msg" id="error-msg"></p>
+                </form>
+            </div>
+
+            <div class="order-sidebar">
+                <h3>Order Summary</h3>
+                <div id="order-items"></div>
+                <hr>
+                <div class="summary-line">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-line total">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+                <p class="secure-text">Secure Encrypted Transaction</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 DigitalStore Project. All rights reserved.</p>
+        </div>
+</footer>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
